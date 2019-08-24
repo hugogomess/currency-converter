@@ -10,9 +10,9 @@ First you need to have installed [Node.js 10](https://nodejs.org/en/) and [Angul
 
 1. First clone this repository
 
-    ```
-    $ git clone git@github.com:hugogomess/currency-converter.git
-    ```
+  ```
+  $ git clone git@github.com:hugogomess/currency-converter.git
+  ```
 
 2. Go to the project directory:
 
