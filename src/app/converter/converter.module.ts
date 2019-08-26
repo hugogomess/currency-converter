@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { ConverterComponent } from './components';
 import { CurrencyService, ConverterService } from './services';
@@ -10,7 +11,8 @@ import { CurrencyService, ConverterService } from './services';
   declarations: [ConverterComponent],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   exports: [
     ConverterComponent

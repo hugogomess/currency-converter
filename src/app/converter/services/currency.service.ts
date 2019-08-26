@@ -60,6 +60,7 @@ export class CurrencyService {
         this.currencies.push(currency);
       }
 
+      return this.currencies;
 
     }
 }

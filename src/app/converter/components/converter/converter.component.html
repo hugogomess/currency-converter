@@ -1,1 +1,27 @@
-<p>converter works! xd</p>
+<br />
+<div class="alert alert-danger" role="alert" *ngIf="error">
+    Erro ao obter dados. Tente novamente.
+</div>
+<div class="panel panel-success">
+    <div class="panel-heading">
+        Selecione a moeda a ser convertida
+    </div>
+    <div class="panel-body text-center">
+        <form class="form-inline" #conversionForm="ngForm">
+            <input type="text" name="value" class="form-control text-right" placeholder="0" required
+                [(ngModel)]="conversion.value">
+            <select name="sourceCurrency" [(ngModel)]="conversion.sourceCurrency" class="form-control" required>
+                <option *ngFor="let currency of currencies" [value]="currency.initials">
+                    {{ currency.initials }} - {{ currency.description }}
+                </option>
+            </select>
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+            <select name="targetCurrency" [(ngModel)]="conversion.targetCurrency" class="form-control" required>
+                <option *ngFor="let currency of currencies" [value]="currency.initials">
+                    {{ currency.initials }} - {{ currency.description }}
+                </option>
+            </select>
+            <input type="submit" value="Convert" class="btn btn-success" data-toggle="modal" data-target="#quotationModal" (click)="convert()" [disabled]="!conversionForm.form.valid">
+        </form>
+    </div>
+</div>
