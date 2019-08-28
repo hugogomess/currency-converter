@@ -7,10 +7,11 @@ import { ConverterComponent } from './components';
 import { CurrencyService, ConverterService } from './services';
 import { NumberDirective } from './directives';
 import { QuotationModalComponent } from './components/quotation-modal/quotation-modal.component';
+import { BrazilianDatePipe } from './pipes';
 
 
 @NgModule({
-  declarations: [ConverterComponent, NumberDirective, QuotationModalComponent],
+  declarations: [ConverterComponent, NumberDirective, QuotationModalComponent, BrazilianDatePipe],
   imports: [
     CommonModule,
     HttpClientModule,
