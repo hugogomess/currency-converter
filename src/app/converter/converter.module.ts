@@ -6,10 +6,11 @@ import { FormsModule } from '@angular/forms';
 import { ConverterComponent } from './components';
 import { CurrencyService, ConverterService } from './services';
 import { NumberDirective } from './directives';
+import { QuotationModalComponent } from './components/quotation-modal/quotation-modal.component';
 
 
 @NgModule({
-  declarations: [ConverterComponent, NumberDirective],
+  declarations: [ConverterComponent, NumberDirective, QuotationModalComponent],
   imports: [
     CommonModule,
     HttpClientModule,
