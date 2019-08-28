@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { QuotationModalComponent } from './quotation-modal.component';
+import { BrazilianDatePipe } from '../../pipes';
+import { ConverterService } from '../../services';
+
 
 describe('QuotationModalComponent', () => {
   let component: QuotationModalComponent;
@@ -8,7 +11,13 @@ describe('QuotationModalComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ QuotationModalComponent ]
+      declarations: [
+        QuotationModalComponent,
+        BrazilianDatePipe
+      ],
+      providers: [
+        ConverterService
+      ]
     })
     .compileComponents();
   }));
